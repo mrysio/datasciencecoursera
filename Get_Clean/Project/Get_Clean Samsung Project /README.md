@@ -11,9 +11,9 @@ This repo includes:
 
 1) R script called run_analysis.R - script for performing the analysis from beginning to the end, the output of this script is the tidy data 
 
-2) A code book called CodeBook.md - describes the variables, the data, and any transformations or work that I performed to clean up the data
+2) A code book called CodeBook.md - describes the variables, the data, and transformations or work with variables that I performed to clean up the data
 
-3) A readme file called README.md - a file that you reading now, its purpose is to help you to grasp the gist of the project and now how to move within files
+3) A readme file called README.md - a file that you reading now, its purpose is to help you to grasp the gist of the project, know how to move within files and read explanation what analysis file do
 
 You should first take a look on CodeBook and then you can move on to the run_analysis script.
 
