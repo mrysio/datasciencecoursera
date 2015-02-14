@@ -44,13 +44,18 @@ colnames(merged_data) <- all_colnames
 merged_data <- merged_data[, !duplicated(colnames(merged_data))]
 
 #Extracts only the measurements on the mean and standard deviation for each measurement. 
+# Please note that I have extracted only the variables that inlcudes "std()" and "mean()" strings,
+# so I have ommited cases like "meanFreq()" etc.
 library(dplyr)
 extracted_data <- select(merged_data, c(contains("subject"), contains("activity"),
                                         contains("mean()"), contains("std()")))
+#dim(extracted_data)
+#[1] 10299    68
 
-#Use descriptive activity names to name the activities in the data set
 #Read activity names dictionary
 act_names <- read.table("./activity_labels.txt", header= FALSE)
+
+#Use descriptive activity names to name the activities in the data set
 total_data <- transform(extracted_data,activity = factor(activity,
                                                          levels=as.vector(act_names[,1]), 
                                                          labels=as.vector(act_names[,2])))
